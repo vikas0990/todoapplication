@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h3>Employee Details</h3>
+<hr>   
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Email Address</th>
+          <th>Date Of Joining</th>
+          <th>Date Of Resigning</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let employee of employeeList[0]">
+          <td>{{employee.ename}}</td>
+          <td>{{employee.email_add}}</td>
+          <td>{{employee.doj| date:'dd-MM-yyyy'}}</td>
+          <td>{{employee.date_of_resign| date:'dd-MM-yyyy'}}</td>
+          
+         </tr>
+ 
+      </tbody>
+    </table>
+  </div>

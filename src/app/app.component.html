@@ -1,0 +1,22 @@
+
+<div class="container">
+
+
+<div class="row">
+<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+ 
+  <ul class="nav nav-tabs">
+    <li role="presentation" (click)="setDocTitle( 'Employee Home Page' )" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="/">Home Page</a></li>
+    <li role="presentation" (click)="setDocTitle( 'Employee list Page' )" routerLinkActive="active"><a routerLink="employeelist">Emplyee List</a></li>
+    <li role="presentation" (click)="setDocTitle( 'Employee Add Page' )" routerLinkActive="active"><a routerLink="addemployee">Add Employee</a></li>
+    
+</ul>
+</div>
+<hr>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
