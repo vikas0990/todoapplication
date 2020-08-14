@@ -1,4 +1,24 @@
-#tableforEmployees{
-    position:absolute; left:80px;
-    border: 1px;
-}
+table, th, td {
+    border: 1px solid black;
+  
+  }
+
+  #tableforEmployees {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tableforEmployees td, #tableforEmployees th {
+    border: 1px solid,black;
+    padding: 8px;
+  }
+  
+
+  #tableforEmployees th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }

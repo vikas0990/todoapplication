@@ -17,8 +17,9 @@ export class AddemployeeComponent implements OnInit {
 
   postEmployee(form : NgForm){
    //post employee request
-   this.http.post('http://localhost:4000/addemployee',form.value).subscribe(response=>{
+   this.http.post('http://localhost:4000/addemployee',form.value).subscribe((response:Response)=>{
     console.log(response);
+    console.log(response.headers);
    });
    this.added=true;
    form.reset();

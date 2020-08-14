@@ -1,12 +1,13 @@
 
-<div id="tableContentforEmployees" class="container">
+
  <hr>
   Start Date:
   <input type="date" [(ngModel)]="from">
    End Date:<input type="date" [(ngModel)]="to">
 
       <hr>   
-    <table border="1" id="tableforEmployees" class="table">
+      
+      <table  id="tableforEmployees" class="table">
       <thead>
         <tr>
           <th>Employee id</th>
@@ -14,9 +15,11 @@
           <th>Email Address</th>
           <th>Date Of Joining</th>
           <th>Date Of Resigning</th>
+          <th></th>
         </tr>
       </thead>
       <tbody >
+        
         <tr *ngFor="let employee of employeesList[0] | employeeFilter: from: to">
           <td>{{employee.eid}}</td>
           <td>{{employee.ename}}</td>
@@ -24,12 +27,11 @@
           <td>{{employee.doj| date:'dd-MM-yyyy'}}</td>
           <td>{{employee.date_of_resign| date:'dd-MM-yyyy'}}</td>
           <td>
-            <a (click)="setDocTitle( 'Employee View Page' )" routerLink="../employee/{{employee.eid}}">View Employee</a>&nbsp;&nbsp;||
-            <a (click)="setDocTitle( 'Employee Update Page' )" routerLink="../updateemployee/{{employee.eid}}">Update Employee</a>&nbsp;&nbsp;||
-            <a (click)="setDocTitle( 'Employee Delete Page' )" routerLink="../deleteemployee/{{employee.eid}}">Delete Employee</a>
+            <a (click)="setDocTitle('Employee View Page' )" routerLink="../employee/{{employee.eid}}">View Employee</a>&nbsp;&nbsp;|| 
+            <a (click)="setDocTitle('Employee Update Page' )" routerLink="../updateemployee/{{employee.eid}}"  [queryParams]="{'employeeId': employee.id,'employeeName': employee.ename,'employeeEmailAddress': employee.email_add,'employeeDOJ': employee.doj,'employeeDateOfResign': employee.date_of_resign}">Update Employee</a>&nbsp;&nbsp;||
+            <a (click)="setDocTitle('Employee Delete Page' )" routerLink="../deleteemployee/{{employee.eid}}">Delete Employee</a>
         </td>
         </tr>
  
       </tbody>
     </table>
-  </div>

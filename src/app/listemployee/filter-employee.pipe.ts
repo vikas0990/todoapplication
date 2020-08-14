@@ -11,7 +11,7 @@ export class EmployeeFilterPipe implements PipeTransform{
 
 transform(employeeList :Employee[],from:Date,to:Date): Employee[]{
    
-    if (!employeeList || !from) {
+    if (!employeeList || !from || !to) {
         return employeeList;
       }
       return employeeList.filter(emp=>{

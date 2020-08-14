@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EmployeeComponent } from './listemployee/employee/employee.component';
 import { EmployeeFilterPipe } from './listemployee/filter-employee.pipe';
+
 const appRoute:Routes=[
   {  path:'' , component:HomeComponent},
   
